@@ -32,7 +32,7 @@ function Tour({ data, list, setList }) {
         {showBtn ? data.info : data.info.slice(0, 200)}
       </p>
       <button id={`see-more-${data.id}`} onClick={() => setShowBtn(!showBtn)}>
-        {showBtn ? "See less" : "See more"}
+        {showBtn ? "Show less" : "See more"}
       </button>
     </div>
   );
