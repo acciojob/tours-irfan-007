@@ -31,7 +31,7 @@ function Tour({ data, list, setList }) {
       <p id={`tour-item-para-${data.id}`}>
         {showBtn ? data.info : data.info.slice(0, 200)}
       </p>
-      <button onClick={() => setShowBtn(!showBtn)}>
+      <button id={`see-more-${data.id}`} onClick={() => setShowBtn(!showBtn)}>
         {showBtn ? "See less" : "Show more"}
       </button>
     </div>
