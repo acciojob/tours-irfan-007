@@ -19,17 +19,21 @@ function Tour({ data, list, setList }) {
       <h3>{data.name}</h3>
       <div>
         Price: <span>{data.price}</span>{" "}
-        <button style={{ color: "red", float: "right" }} onClick={removeItem}>
+        <button
+          id={`delete-btn-${data.id}`}
+          style={{ color: "red", float: "right" }}
+          onClick={removeItem}
+        >
           Remove tour
         </button>
       </div>
       <img src={data.image} alt="" />
-      <p>
+      <p id={`tour-item-para-${data.id}`}>
         {showBtn ? data.info : data.info.slice(0, 200)}
-        <button onClick={() => setShowBtn(!showBtn)}>
-          {showBtn ? "See less" : "Show more"}
-        </button>
       </p>
+      <button onClick={() => setShowBtn(!showBtn)}>
+        {showBtn ? "See less" : "Show more"}
+      </button>
     </div>
   );
 }
